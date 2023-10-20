@@ -69,8 +69,9 @@ World!
 
 
 
-😀
-<details>
+
+<details:zany_face:>
+
 <summary>Section A</summary>
 <details>
 <summary>Section A.B</summary>
