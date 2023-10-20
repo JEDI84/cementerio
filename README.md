@@ -70,9 +70,9 @@ World!
 
 
 
-<:zany_face: details>
+<details>
 
-<summary>Section A</summary>
+<summary :zany_face:>Section A</summary>
 <details>
 <summary>Section A.B</summary>
 <details>
