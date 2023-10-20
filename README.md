@@ -7,7 +7,7 @@
 
 # TEAM | 
 
-- tierrasanta has been developed by:
+- Tierra Santa has been developed by:
 
 Raul Villarraso: https://github.com/RaulVillarraso, Adrián Angulo Dieppa: https://github.com/adrianaadd Yeray Armas: https://github.com/JEDI84
 
@@ -17,7 +17,7 @@ npm Install
 
 ## Introduction
 
-/
+Tierra Santa comes out of the need of having a better organization within the graveyards. A database where we can organize the decesed, graveyard "map", graves either common or private, rent or bought, employees and external professionals. It has been developt to cover administration porpuses, and so the options for the external users are in the IceBox
 
 ### Members Endpoints
 
