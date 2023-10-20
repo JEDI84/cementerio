@@ -66,7 +66,7 @@ $ git push origin main
 
 <summary>:cowboy_hat_face:Section A</summary>
 <details>
-<summary>Inner Section</summary>
+<summary>:people_hugging:Inner Section</summary>
   Done!
 </details>
 </details>
@@ -76,7 +76,7 @@ $ git push origin main
 
 <summary>:woman_singer:Section B</summary>
 <details>
-<summary>Inner Section</summary>
+<summary>:dog:Inner Section</summary>
   Done!
 </details>
 </details>
