@@ -70,7 +70,7 @@ World!
 
 
 
-<details:zany_face:>
+:zany_face:<details>
 
 <summary>Section A</summary>
 <details>
