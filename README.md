@@ -64,7 +64,7 @@ $ git push origin main
 
 <details>
 
-<summary>:cowboy_hat_face:Section A</summary>
+<summary>:rocket:Travelling Section</summary>
 <details>
 <summary>:people_hugging:Inner Section</summary>
   Done!
