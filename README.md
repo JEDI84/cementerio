@@ -59,20 +59,12 @@ $ git push origin main
 ```
 
 
-Hello
-World!
-<details open>
-  <summary>Hello</summary>
-  World!
-</details>
-
-
 
 
 
 <details>
 
-<summary :zany_face:>Section A</summary>
+<summary>:zany_face:Section A</summary>
 <details>
 <summary>Section A.B</summary>
 <details>
