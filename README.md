@@ -64,11 +64,11 @@ $ git push origin main
 
 <details>
 
-<summary>:grinning_face_with_big_eyes:Section A</summary>
+<summary>:cowboy_hat_face:Section A</summary>
 <details>
 <summary>Section A.B</summary>
 <details>
-<summary>:cowboy_hat_face:Section A.B.C</summary>
+<summary>Section A.B.C</summary>
 <details>
 <summary>Section A.B.C.D</summary>
   Done!
