@@ -64,9 +64,9 @@ $ git push origin main
 
 <details>
 
-<summary>:zany_face:Section A</summary>
+<summary>:grimacing_face:Section A</summary>
 <details>
-<summary>:grimacing_face:Section A.B</summary>
+<summary>Section A.B</summary>
 <details>
 <summary>:cowboy_hat_face:Section A.B.C</summary>
 <details>
