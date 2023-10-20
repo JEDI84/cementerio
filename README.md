@@ -64,7 +64,7 @@ $ git push origin main
 
 <details>
 
-<summary>:grimacing_face:Section A</summary>
+<summary>:grinning_face_with_big_eyes:Section A</summary>
 <details>
 <summary>Section A.B</summary>
 <details>
