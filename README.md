@@ -68,7 +68,8 @@ World!
 
 
 
-Section A
+
+
 <details>
 <summary>Section A</summary>
 <details>
