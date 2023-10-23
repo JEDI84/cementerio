@@ -6,10 +6,12 @@ const express = require('express')
 const cors = require('cors')
 const morgan = require('morgan')
 
+
+
 async function checkAndSyncSQL() {
     await checkConnection()
     addRelationsToModels()
-    await syncModels()
+    await syncModels("alter")
 }
 
 function initAndListen(){
@@ -18,8 +20,8 @@ function initAndListen(){
     .use(morgan('dev'))
     .use(express.json())
     .use('/api', require('./api/routes'))
-    .listen(3000, () => {
-        console.log(`Listening on port ${3000}`)
+    .listen(3001, () => {
+        console.log(`Listening on port ${3001}`)
     })
 }
 
