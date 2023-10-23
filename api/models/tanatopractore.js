@@ -1,7 +1,7 @@
 const { sequelize } = require('../../database/index.js') 
 const { DataTypes } = require('sequelize')
 
-const Galeria = sequelize.define('Galeria', { 
+const Tanatopractore = sequelize.define('Tanatopractore', { 
 
         title: {
             type: DataTypes.STRING,
@@ -10,10 +10,13 @@ const Galeria = sequelize.define('Galeria', {
         info: {
             type: DataTypes.STRING
         },
-        
+       
+        create_ad: {
+            type: DataTypes.DATE
+        },
 },
 { //opciones
-    timestamps: false, 
+    timestamps: false,
 })
 
-module.exports = Galeria
+module.exports = Tanatopractore
