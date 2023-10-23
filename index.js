@@ -20,8 +20,8 @@ function initAndListen(){
     .use(morgan('dev'))
     .use(express.json())
     .use('/api', require('./api/routes'))
-    .listen(3001, () => {
-        console.log(`Listening on port ${3001}`)
+    .listen(3002, () => {
+        console.log(`Listening on port ${3002}`)
     })
 }
 
