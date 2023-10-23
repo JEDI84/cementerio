@@ -1,7 +1,6 @@
-
-
-
-
+const Grave = require('../api/models/graves.model')
+const Mausoleum = require('../api/models/mausoleums.model')
+const Common = require('../api/models/common.model')
 
 function addRelationsToModels(){
     try {
