@@ -24,7 +24,6 @@ Tierra Santa comes out of the need of having a better organization within the gr
 
 <details>
 <summary>:round_pushpin: Common Endpoints</summary>
-<details>
 <summary>
 
 | METHOD | ENDPOINT                  | TOKEN | ROLE         | DESCRIPTION                  | POST PARAMS                | RETURNS                              |
@@ -36,7 +35,6 @@ Tierra Santa comes out of the need of having a better organization within the gr
 | DELETE | /commons/:id              | YES   | Admin        | Remove one common grave      | common_id                  | "Common deleted"                     |
 
 </summary>
-</details>
 </details>
 
 
