@@ -106,32 +106,32 @@ Tierra Santa comes out of the need of having a better organization within the gr
 
 
 <details>
-<summary>:love_hotel: Personal Endpoints</summary>
+<summary> :man: :woman: Staff Endpoints</summary>
 
 | METHOD | ENDPOINT                  | TOKEN | ROLE         | DESCRIPTION                  | POST PARAMS                | RETURNS                              |
 | ------ | ------------------------- | ----- | ------------ | ---------------------------- | -------------------------- | ------------------------------------ |
-| GET    | /personal                 | YES   | Professional | Get all personal             | -                          | [{ personal }]                       |
-| GET    | /personal/:id             | YES   | Professional | Get one personal             | personal_id                | { personal }                         |
-| PUT    | /personal/:id             | YES   | Admin        | Update personal              | personal_id                | "Personal updated"                   |
-| POST   | /personal                 | YES   | Admin        | Create personal              | req.body                   | "Personal created"                   |
-| DELETE | /personal/:id             | YES   | Admin        | Remove one personal          | personal_id                | "Personal deleted"                   | 
+| GET    | /staff                    | YES   | Professional | Get all staff                | -                          | [{ staff }]                          |
+| GET    | /staff/:id                | YES   | Professional | Get one staff                | staff_id                   | { staff }                            |
+| PUT    | /staff/:id                | YES   | Admin        | Update staff                 | staff_id                   | "Staff updated"                      |
+| POST   | /staff                    | YES   | Admin        | Create staff                 | req.body                   | "Staff created"                      |
+| DELETE | /staff/:id                | YES   | Admin        | Remove one staff             | staff_id                   | "Staff deleted"                      | 
 
 </details>
 
 
 <details>
-<summary> :man: :woman: Personal Endpoints</summary>
+<summary> :lab_coat: Tanatopractor Endpoints</summary>
 
 | METHOD | ENDPOINT                  | TOKEN | ROLE         | DESCRIPTION                  | POST PARAMS                | RETURNS                              |
 | ------ | ------------------------- | ----- | ------------ | ---------------------------- | -------------------------- | ------------------------------------ |
-| GET    | /personal                 | YES   | Professional | Get all personal             | -                          | [{ personal }]                       |
-| GET    | /personal/:id             | YES   | Professional | Get one personal             | personal_id                | { personal }                         |
-| PUT    | /personal/:id             | YES   | Admin        | Update personal              | personal_id                | "Personal updated"                   |
-| POST   | /personal                 | YES   | Admin        | Create personal              | req.body                   | "Personal created"                   |
-| DELETE | /personal/:id             | YES   | Admin        | Remove one personal          | personal_id                | "Personal deleted"                   | 
+| GET    | /tanatopractors           | YES   | Professional | Get all personal             | -                          | [{ tanatopractors }]                       |
+| GET    | /tanatopractor/:id        | YES   | Professional | Get one personal             | personal_id                | { tanatopractor }                         |
+| GET    | /tanatopractor/:id/deceased  | YES   | Professional | Get assigned deceased     | tanatopractor_id           | { tanatopractor_deceased }           |
+| PUT    | /tanatopractor/:id        | YES   | Admin        | Update personal              | personal_id                | "Tanatopractor updated"              |
+| POST   | /tanatopractor            | YES   | Admin        | Create personal              | req.body                   | "Tanatopractor created"              |
+| DELETE | /tanatopractor/:id        | YES   | Admin        | Remove one personal          | personal_id                | "Tanatopractor deleted"              | 
 
 </details>
-
 
 
 
