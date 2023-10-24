@@ -1,7 +1,7 @@
 const { sequelize } = require('../../database/index.js') 
 const { DataTypes } = require('sequelize')
 
-const Deceased = sequelize.define('Deceased', { 
+const Deceased = sequelize.define('deceased', { 
 
         firstname: {
             type: DataTypes.STRING,           
