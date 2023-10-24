@@ -1,4 +1,4 @@
-const { getAllPersonal, getOnePersonal, createPersonal, updatePersonal, deletePersonal, getPersonal } = require('../controllers/personal.controller.js')
+const { getAllPersonal, getOnePersonal, createPersonal, updatePersonal, deletePersonal } = require('../controllers/personal.controller.js')
 const { checkAuth, checkAdmin } = require('../middleware')
 
 
@@ -6,7 +6,6 @@ const router = require('express').Router() //le indicamos que vamos a usar el ro
 
 //definimos las rutas por verbo
 router.get('/',checkAuth, checkAdmin,  getAllPersonal) // trae todos los registros del modelo - todos los usuarios
-router.get('/getPersonal',checkAuth, checkAdmin, getPersonal)
 router.get('/:id',checkAuth, checkAdmin,  getOnePersonal) //trae un solo registro - le indicamos el id por params
 router.post('/',  createPersonal) // crea un nuevo registro en el modelo - los datos se los pasamos por el body
 router.put('/:id', checkAuth, checkAdmin, updatePersonal) // actualiza un solo registro - le enviamos el id por params y los datos a actualizar por el body
