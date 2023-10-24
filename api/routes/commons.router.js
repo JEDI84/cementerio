@@ -1,12 +1,13 @@
 const router = require('express').Router()
+const { checkAuth, checkAdmin } = require('../middleware')
 
 const { getAllCommons, getOneCommon, createCommon, updateCommon, deleteCommon } = require('../controllers/commons.controller')
 
-router.get('/', getAllCommons)
-router.get('/:id', getOneCommon)
-router.post('/', createCommon)
-router.put('/:id', updateCommon)
-router.delete('/:id', deleteCommon)
+router.get('/',checkAuth, getAllCommons)
+router.get('/:id',checkAuth, getOneCommon)
+router.post('/',checkAuth, checkAdmin, createCommon)
+router.put('/:id',checkAuth, checkAdmin, updateCommon)
+router.delete('/:id',checkAuth, checkAdmin, deleteCommon)
 
 
 module.exports = router

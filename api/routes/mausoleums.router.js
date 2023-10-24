@@ -1,12 +1,13 @@
 const router = require('express').Router()
+const { checkAuth, checkAdmin } = require('../middleware')
 
 const { getAllMausoleums, getOneMausoleum,createMausoleum,updateMausoleum, deleteMausoleum } = require('../controllers/mausoleums.controller')
 
-router.get('/', getAllMausoleums)
-router.get('/:id', getOneMausoleum)
-router.post('/', createMausoleum)
-router.put('/:id', updateMausoleum)
-router.delete('/:id', deleteMausoleum)
+router.get('/',checkAuth, getAllMausoleums)
+router.get('/:id',checkAuth, getOneMausoleum)
+router.post('/',checkAuth, checkAdmin, createMausoleum)
+router.put('/:id',checkAuth, checkAdmin, updateMausoleum)
+router.delete('/:id',checkAuth, checkAdmin, deleteMausoleum)
 
 
 module.exports = router
