@@ -22,7 +22,7 @@ Tierra Santa comes out of the need of having a better organization within the gr
 
 <details>
 <summary>:round_pushpin: Common Endpoints</summary>
-<summary>
+
 
 | METHOD | ENDPOINT                  | TOKEN | ROLE         | DESCRIPTION                  | POST PARAMS                | RETURNS                              |
 | ------ | ------------------------- | ----- | ------------ | ---------------------------- | -------------------------- | ------------------------------------ |
