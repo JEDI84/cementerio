@@ -21,17 +21,6 @@ async function getOnePersonal(req, res) {
     }
 }
 
-async function getPersonal(req, res) {
-    console.log(res.locals.personal)
-    try {
-        const personal = await Personal.findByPk(res.locals.user.id)
-        if (!personal) { res.status(500).send("Personal not found") }
-        res.status(200).json(personal)
-    } catch (error) {
-        res.status(402).send(error.message)
-    }
-}
-
 async function createPersonal(req, res) {
     console.log(req.body)
     try {
