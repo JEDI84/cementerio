@@ -56,7 +56,7 @@ async function deleteTanatopractore(req, res){
 async function getAssignedDeceased(req, res) {
     try {
         const relation = await Tanatopractor.findByPk(req.params.id)
-        const assigned = await relation.getDifuntos()
+        const assigned = await relation.getDeceaseds()
         return res.status(200).json(assigned)
     } catch (error) {
         res.status(500).send(error.message)
