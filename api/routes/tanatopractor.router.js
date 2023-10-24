@@ -4,7 +4,7 @@ const { checkAuth, checkAdmin } = require('../middleware')
 const router = require('express').Router() 
 
 router.get('/',checkAuth, getAllTanatopractores) 
-router.get('/:id/difunto', checkAuth, getAssignedDeceased)
+router.get('/:id/deceased', checkAuth, getAssignedDeceased)
 router.get('/:id',checkAuth,getOneTanatopractore) 
 router.post('/', checkAuth, checkAdmin, createTanatopractore) 
 router.put('/:id',checkAuth, checkAdmin,updateTanatopractore) 
