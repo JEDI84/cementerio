@@ -23,7 +23,6 @@ Tierra Santa comes out of the need of having a better organization within the gr
 <details>
 <summary>:round_pushpin: Common Endpoints</summary>
 
-
 | METHOD | ENDPOINT                  | TOKEN | ROLE         | DESCRIPTION                  | POST PARAMS                | RETURNS                              |
 | ------ | ------------------------- | ----- | ------------ | ---------------------------- | -------------------------- | ------------------------------------ |
 | GET    | /commons                  | YES   | Professional | Get all common graves        | -                          | [{ common }]                         |
@@ -32,14 +31,12 @@ Tierra Santa comes out of the need of having a better organization within the gr
 | POST   | /commons                  | YES   | Admin        | Create common grave          | req.body                   | "Common created"                     |
 | DELETE | /commons/:id              | YES   | Admin        | Remove one common grave      | common_id                  | "Common deleted"                     |
 
-</summary>
 </details>
 
 
 
 <details>
-<summary>:latin_cross: Difunto Endpoints</summary>
-<summary>
+<summary>:latin_cross: Deceased Endpoints</summary>
 
 | METHOD | ENDPOINT                  | TOKEN | ROLE         | DESCRIPTION                  | POST PARAMS                | RETURNS                              |
 | ------ | ------------------------- | ----- | ------------ | ---------------------------- | -------------------------- | ------------------------------------ |
@@ -49,13 +46,11 @@ Tierra Santa comes out of the need of having a better organization within the gr
 | POST   | /deceased                 | YES   | Admin        | Create deceased              | req.body                   | "Deceased created"                   |
 | DELETE | /deceased/:id             | YES   | Admin        | Remove one deceased          | deceased_id                | "Deceased deleted"                   |
 
-</summary>
 </details>
 
 
 <details>
 <summary>:arrow_up: Galery Endpoints</summary>
-<summary>
 
 | METHOD | ENDPOINT                  | TOKEN | ROLE         | DESCRIPTION                  | POST PARAMS                | RETURNS                              |
 | ------ | ------------------------- | ----- | ------------ | ---------------------------- | -------------------------- | ------------------------------------ |
@@ -65,13 +60,11 @@ Tierra Santa comes out of the need of having a better organization within the gr
 | POST   | /galery                   | YES   | Admin        | Create galery                | req.body                   | "Galery created"                     |
 | DELETE | /galery/:id               | YES   | Admin        | Remove one galery            | galery_id                  | "Galery deleted"                     |
 
-</summary>
 </details>
 
 
 <details>
 <summary>:headstone: Grave Endpoints</summary>
-<summary>
 
 | METHOD | ENDPOINT                  | TOKEN | ROLE         | DESCRIPTION                  | POST PARAMS                | RETURNS                              |
 | ------ | ------------------------- | ----- | ------------ | ---------------------------- | -------------------------- | ------------------------------------ |
@@ -81,13 +74,11 @@ Tierra Santa comes out of the need of having a better organization within the gr
 | POST   | /grave                    | YES   | Admin        | Create grave                 | req.body                   | "Grave created"                      |
 | DELETE | /grave/:id                | YES   | Admin        | Remove one grave             | grave_id                   | "Grave deleted"                      |
 
-</summary>
 </details>
 
 
 <details>
 <summary>:classical_building: Graveyard Endpoints</summary>
-<summary>
 
 | METHOD | ENDPOINT                  | TOKEN | ROLE         | DESCRIPTION                  | POST PARAMS                | RETURNS                              |
 | ------ | ------------------------- | ----- | ------------ | ---------------------------- | -------------------------- | ------------------------------------ |
@@ -97,7 +88,34 @@ Tierra Santa comes out of the need of having a better organization within the gr
 | POST   | /graveyard                | YES   | Admin        | Create graveyard             | req.body                   | "Graveyard created"                  |
 | DELETE | /graveyard/:id            | YES   | Admin        | Remove one graveyard         | graveyard_id               | "Graveyard deleted"                  |
 
-</summary>
+</details>
+
+
+<details>
+<summary>:love_hotel: Mausoleum Endpoints</summary>
+
+| METHOD | ENDPOINT                  | TOKEN | ROLE         | DESCRIPTION                  | POST PARAMS                | RETURNS                              |
+| ------ | ------------------------- | ----- | ------------ | ---------------------------- | -------------------------- | ------------------------------------ |
+| GET    | /mausoleums               | YES   | Professional | Get all mausoleums           | -                          | [{ mausoleums }]                     |
+| GET    | /mausoleum/:id            | YES   | Professional | Get one mausoleum            | mausoleum_id               | { mausoleum }                        |
+| PUT    | /mausoleum/:id            | YES   | Admin        | Update mausoleum             | mausoleum_id               | "Mausoleum updated"                  |
+| POST   | /mausoleum                | YES   | Admin        | Create mausoleum             | req.body                   | "Mausoleum created"                  |
+| DELETE | /mausoleum/:id            | YES   | Admin        | Remove one mausoleum         | mausoleum_id               | "Mausoleum deleted"                  |
+
+</details>
+
+
+<details>
+<summary>:love_hotel: Personal Endpoints</summary>
+
+| METHOD | ENDPOINT                  | TOKEN | ROLE         | DESCRIPTION                  | POST PARAMS                | RETURNS                              |
+| ------ | ------------------------- | ----- | ------------ | ---------------------------- | -------------------------- | ------------------------------------ |
+| GET    | /personal                 | YES   | Professional | Get all personal             | -                          | [{ personal }]                       |
+| GET    | /personal/:id             | YES   | Professional | Get one personal             | personal_id                | { personal }                         |
+| PUT    | /personal/:id             | YES   | Admin        | Update personal              | personal_id                | "Personal updated"                   |
+| POST   | /personal                 | YES   | Admin        | Create personal              | req.body                   | "Personal created"                   |
+| DELETE | /personal/:id             | YES   | Admin        | Remove one personal          | personal_id                | "Personal deleted"                   | 
+
 </details>
 
 
