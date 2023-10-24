@@ -47,7 +47,7 @@ async function updateTanatopractore(req, res){
 
 async function deleteTanatopractore(req, res){
     try {
-        const tanatopractore = await Galeria.destroy({
+        const tanatopractore = await Tanatopractore.destroy({
             where: { id: req.params.id },
         })
         res.status(200).json({text: "tanatopractore eliminado", tanatopractore: tanatopractore})

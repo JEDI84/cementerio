@@ -47,7 +47,7 @@ async function updateDifunto(req, res){
 
 async function deleteDifunto(req, res){
     try {
-        const difunto = await Galeria.destroy({
+        const difunto = await Difunto.destroy({
             where: { id: req.params.id },
         })
         res.status(200).json({text: "difunto eliminado", difunto: difunto})

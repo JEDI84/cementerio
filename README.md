@@ -19,54 +19,31 @@ npm Install
 
 Tierra Santa comes out of the need of having a better organization within the graveyards. A database where we can organize the decesed, graveyard "map", graves either common or private, rent or bought, employees and external professionals. It has been developt to cover administration porpuses, and so the options for the external users are in the IceBox
 
-### Members Endpoints
+### Common Endpoints
 
-| METHOD | ENDPOINT                  | TOKEN | ROLE  | DESCRIPTION                  | POST PARAMS                | RETURNS                              |
-| ------ | ------------------------- | ----- | ----- | ---------------------------- | -------------------------- | ------------------------------------ |
-| GET    | /members                  | YES   | Admin | Get all users                | -                          | [{ member }]                         |
-| GET    | /members/:memberId        | YES   | Members | Get one user               | member_id                  | { member }                           |
-| PUT    | /members/:memberId        | YES   | Members | Update user                | member_id                  | "Member updated"                     |
-| POST   | /members                  | YES   | Admin | Create one user              | req.body                   | "Member created"                     |
-| DELETE | /members/:memberId        | YES   | Members | Remove one user            | member_id                  | "Member deleted"                     |
+| METHOD | ENDPOINT                  | TOKEN | ROLE         | DESCRIPTION                  | POST PARAMS                | RETURNS                              |
+| ------ | ------------------------- | ----- | ------------ | ---------------------------- | -------------------------- | ------------------------------------ |
+| GET    | /commons                  | YES   | Professional | Get all common graves        | -                          | [{ common }]                         |
+| GET    | /commons/:id              | YES   | Professional | Get one common grave         | common_id                  | { common }                           |
+| PUT    | /commons/:id              | YES   | Professional | Update common grave          | common_id                  | "Common updated"                     |
+| POST   | /commons                  | YES   | Professional | Create common grave          | req.body                   | "Common created"                     |
+| DELETE | /commons/:id              | YES   | Admin        | Remove one common grave      | common_id                  | "Common deleted"                     |
 
+### Difunto Endpoints
 
-
-## Learning Goals
-
-
-## Requirements
-
-- / fork githubś repo
-- Clone this repo into your `~/code/labs`
-
-## Deliverables
-
-
-## Introduction
-
-
-## Extra Resources
-
-//- [Express Routing](https://expressjs.com/en/guide/routing.html)
-//- [chucknorris-io](https://www.npmjs.com/package/chucknorris-io)
-
-## Submission
-
-```
-$ git add .
-$ git commit -m "done"
-$ git push origin main
-```
-
-
-
-
+| METHOD | ENDPOINT                  | TOKEN | ROLE         | DESCRIPTION                  | POST PARAMS                | RETURNS                              |
+| ------ | ------------------------- | ----- | ------------ | ---------------------------- | -------------------------- | ------------------------------------ |
+| GET    | /difunto                  | YES   | Professional | Get all difuntos             | -                          | [{ difunto }]                        |
+| GET    | /difunto/:id              | YES   | Professional | Get one difunto              | difunto_id                 | { difunto }                          |
+| PUT    | /difunto/:id              | YES   | Professional | Update difunto               | difunto_id                 | "Difunto updated"                    |
+| POST   | /difunto                  | YES   | Admin        | Create difunto               | req.body                   | "Difunto created"                    |
+| DELETE | /difunto/:id              | YES   | Admin        | Remove one difunto           | difunto_id                 | "Difunto deleted"                    |
 
 <details>
 
-<summary>:rocket:Travelling Section</summary>
+<summary>🚀Travelling Section</summary>
 <details>
-<summary>:people_hugging:Inner Section</summary>
+<summary>🫂Inner Section</summary>
   Done!
 </details>
 </details>
@@ -74,13 +51,12 @@ $ git push origin main
 
 <details>
 
-<summary>:woman_singer:Section B</summary>
+<summary>👩‍🎤Section B</summary>
 <details>
-<summary>:dog:Inner Section</summary>
+<summary>🐶Inner Section</summary>
   Done!
 </details>
 </details>
-
 
 
 
