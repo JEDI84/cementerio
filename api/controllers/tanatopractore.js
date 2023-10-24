@@ -56,4 +56,15 @@ async function deleteTanatopractore(req, res){
     }
 }
 
-module.exports = { getAllTanatopractores, getOneTanatopractore, createTanatopractore, updateTanatopractore, deleteTanatopractore,}
+async function getAssignedDeceased(req, res){
+    try {
+        const relation = await Tanatopractore.findByPk(req.params.id)
+        const assigned = await relation.getDifuntos()
+        return res.status(200).json(assigned)
+    } catch (error) {
+        res.status(500).send(error.message)
+    }
+
+}
+
+module.exports = { getAllTanatopractores, getOneTanatopractore, createTanatopractore, updateTanatopractore, deleteTanatopractore, getAssignedDeceased,}

@@ -1,4 +1,5 @@
 const Difunto = require('../models/difunto') //nos importamos el modelo de usuario
+const { Op } = require('sequelize')
 
 
 async function getAllDifuntos(req, res){
@@ -56,4 +57,16 @@ async function deleteDifunto(req, res){
     }
 }
 
-module.exports = { getAllDifuntos, getOneDifunto, createDifunto, updateDifunto, deleteDifunto,}
+async function getDeceasedByQuery(req, res){
+    try {
+        const deceased = await Difunto.findOne({
+            where: { [Op.or]:{lastName: { [Op.eq]: req.query.lastName },
+                            firstName: { [Op.eq]: req.query.firstName }}},
+        })
+        return res.status(200).json(deceased)
+    } catch (error) {
+        res.status(500).send(error.message)
+    }
+}
+
+module.exports = { getAllDifuntos, getOneDifunto, createDifunto, updateDifunto, deleteDifunto, getDeceasedByQuery}
