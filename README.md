@@ -39,7 +39,24 @@ Tierra Santa comes out of the need of having a better organization within the gr
 | POST   | /difunto                  | YES   | Admin        | Create difunto               | req.body                   | "Difunto created"                    |
 | DELETE | /difunto/:id              | YES   | Admin        | Remove one difunto           | difunto_id                 | "Difunto deleted"                    |
 
+<details>
 
+<summary>🚀Travelling Section</summary>
+<details>
+<summary>🫂Inner Section</summary>
+  Done!
+</details>
+</details>
+
+
+<details>
+
+<summary>👩‍🎤Section B</summary>
+<details>
+<summary>🐶Inner Section</summary>
+  Done!
+</details>
+</details>
 
 
 
