@@ -63,7 +63,7 @@ Tierra Santa comes out of the need of having a better organization within the gr
 
 
 <details>
-<summary>  &#x2016  Galery Endpoints</summary>
+<summary>:&#x2016: Galery Endpoints</summary>
 <details>
 <summary>
 
