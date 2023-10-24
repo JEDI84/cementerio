@@ -69,11 +69,11 @@ Tierra Santa comes out of the need of having a better organization within the gr
 
 | METHOD | ENDPOINT                  | TOKEN | ROLE         | DESCRIPTION                  | POST PARAMS                | RETURNS                              |
 | ------ | ------------------------- | ----- | ------------ | ---------------------------- | -------------------------- | ------------------------------------ |
-| GET    | /difunto                  | YES   | Professional | Get all difuntos             | -                          | [{ difunto }]                        |
-| GET    | /difunto/:id              | YES   | Professional | Get one difunto              | difunto_id                 | { difunto }                          |
-| PUT    | /difunto/:id              | YES   | Admin        | Update difunto               | difunto_id                 | "Difunto updated"                    |
-| POST   | /difunto                  | YES   | Admin        | Create difunto               | req.body                   | "Difunto created"                    |
-| DELETE | /difunto/:id              | YES   | Admin        | Remove one difunto           | difunto_id                 | "Difunto deleted"                    |
+| GET    | /galery                   | YES   | Professional | Get all galeries             | -                          | [{ galery }]                         |
+| GET    | /galery/:id               | YES   | Professional | Get one galery               | galery_id                  | { galery }                           |
+| PUT    | /galery/:id               | YES   | Admin        | Update galery                | galery_id                  | "Galery updated"                     |
+| POST   | /galery                   | YES   | Admin        | Create galery                | req.body                   | "Galery created"                     |
+| DELETE | /galery/:id               | YES   | Admin        | Remove one galery            | galery_id                  | "Galery deleted"                     |
 
 </summary>
   Done!
