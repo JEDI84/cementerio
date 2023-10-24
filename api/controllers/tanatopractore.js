@@ -1,5 +1,6 @@
 const Tanatopractore = require('../models/tanatopractore') 
-
+const Difunto = require('../models/difunto') 
+const tanatopractore_difunto = require("../models/difunto")
 
 async function getAllTanatopractores(req, res){
     try {
@@ -54,6 +55,17 @@ async function deleteTanatopractore(req, res){
     } catch (error) {
         res.status(402).send(error.message)
     }
+}
+
+async function getAssignedDeceased(req, res) {
+    try {
+        const relation = await Tanatopractore.findByPk(req.params.id)
+        const assigned = await relation.getDifuntos()
+        return res.status(200).json(assigned)
+    } catch (error) {
+        res.status(500).send(error.message)
+    }
+
 }
 
 async function getAssignedDeceased(req, res){

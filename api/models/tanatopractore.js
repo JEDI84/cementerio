@@ -3,7 +3,7 @@ const { DataTypes } = require('sequelize')
 
 const Tanatopractore = sequelize.define('tanatopractore', { 
 
-        title: {
+        name: {
             type: DataTypes.STRING,
             
         },
