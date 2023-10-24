@@ -22,8 +22,6 @@ async function getOneTanatopractore(req, res) {
     }
 }
 
-
-
 async function createTanatopractore(req, res){
     console.log(req.body)
     try {
@@ -58,17 +56,6 @@ async function deleteTanatopractore(req, res){
 }
 
 async function getAssignedDeceased(req, res) {
-    try {
-        const relation = await Tanatopractore.findByPk(req.params.id)
-        const assigned = await relation.getDifuntos()
-        return res.status(200).json(assigned)
-    } catch (error) {
-        res.status(500).send(error.message)
-    }
-
-}
-
-async function getAssignedDeceased(req, res){
     try {
         const relation = await Tanatopractore.findByPk(req.params.id)
         const assigned = await relation.getDifuntos()

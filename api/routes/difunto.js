@@ -1,6 +1,4 @@
 const { countDifuntos,getAllDifuntos, createDifunto, updateDifunto, deleteDifunto, getDifuntosWithGraves, getOneDifunto } = require('../controllers/difunto')
-const { getAllDifuntos, getOneDifunto, createDifunto, updateDifunto, deleteDifunto, getDeceasedByQuery, } = require('../controllers/difunto')
-
 const { checkAuth, checkAdmin } = require('../middleware')
 const router = require('express').Router() 
 

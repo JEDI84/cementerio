@@ -26,8 +26,6 @@ async function getOneDifunto(req, res) {
     }
 }
 
-
-
 async function createDifunto(req, res) {
     console.log(req.body)
     try {
@@ -126,19 +124,16 @@ async function countDifuntos(req, res) {
     }
   }
 
+  async function getDeceasedByQuery(req, res){
+      try {
+          const deceased = await Difunto.findOne({
+              where: { [Op.or]:{lastName: { [Op.eq]: req.query.lastName },
+                              firstName: { [Op.eq]: req.query.firstName }}},
+          })
+          return res.status(200).json(deceased)
+      } catch (error) {
+          res.status(500).send(error.message)
+      }
+  }
 
-
-module.exports = { countDifuntos,getAllDifuntos, createDifunto, updateDifunto, deleteDifunto, getDifuntosWithGraves, getOneDifunto }
-async function getDeceasedByQuery(req, res){
-    try {
-        const deceased = await Difunto.findOne({
-            where: { [Op.or]:{lastName: { [Op.eq]: req.query.lastName },
-                            firstName: { [Op.eq]: req.query.firstName }}},
-        })
-        return res.status(200).json(deceased)
-    } catch (error) {
-        res.status(500).send(error.message)
-    }
-}
-
-module.exports = { getAllDifuntos, getOneDifunto, createDifunto, updateDifunto, deleteDifunto, getDeceasedByQuery}
+module.exports = { countDifuntos, getAllDifuntos, createDifunto, updateDifunto, deleteDifunto, getDifuntosWithGraves, getOneDifunto, getDeceasedByQuery, }
