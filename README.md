@@ -136,7 +136,7 @@ Tierra Santa comes out of the need of having a better organization within the gr
 
 
 
-
+/*
 <details>
 
 <summary>👩‍🎤Section B</summary>
@@ -145,7 +145,7 @@ Tierra Santa comes out of the need of having a better organization within the gr
   Done!
 </details>
 </details>
-
+*/
 
 
 
