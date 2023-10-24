@@ -98,6 +98,7 @@ Tierra Santa comes out of the need of having a better organization within the gr
 | ------ | ------------------------- | ----- | ------------ | ---------------------------- | -------------------------- | ------------------------------------ |
 | GET    | /mausoleums               | YES   | Professional | Get all mausoleums           | -                          | [{ mausoleums }]                     |
 | GET    | /mausoleum/:id            | YES   | Professional | Get one mausoleum            | mausoleum_id               | { mausoleum }                        |
+| GET    | /mausoleum/:id/deceased   | YES   | Admin        | Get all deceased in mausoleum| mausoleum_id               | { mausoleum_deceased }               |
 | PUT    | /mausoleum/:id            | YES   | Admin        | Update mausoleum             | mausoleum_id               | "Mausoleum updated"                  |
 | POST   | /mausoleum                | YES   | Admin        | Create mausoleum             | req.body                   | "Mausoleum created"                  |
 | DELETE | /mausoleum/:id            | YES   | Admin        | Remove one mausoleum         | mausoleum_id               | "Mausoleum deleted"                  |
