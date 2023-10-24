@@ -9,7 +9,7 @@
 
 - Tierra Santa has been developed by:
 
-Raul Villarraso: https://github.com/RaulVillarraso, Adrián Angulo Dieppa: https://github.com/adrianaadd Yeray Armas: https://github.com/JEDI84
+:baseball: Raul Villarraso: https://github.com/RaulVillarraso, :basketball: Adrián Angulo Dieppa: https://github.com/adrianaadd :football: Yeray Armas: https://github.com/JEDI84
 
 
 ## PROJECT SETUP
@@ -31,8 +31,8 @@ Tierra Santa comes out of the need of having a better organization within the gr
 | ------ | ------------------------- | ----- | ------------ | ---------------------------- | -------------------------- | ------------------------------------ |
 | GET    | /commons                  | YES   | Professional | Get all common graves        | -                          | [{ common }]                         |
 | GET    | /commons/:id              | YES   | Professional | Get one common grave         | common_id                  | { common }                           |
-| PUT    | /commons/:id              | YES   | Professional | Update common grave          | common_id                  | "Common updated"                     |
-| POST   | /commons                  | YES   | Professional | Create common grave          | req.body                   | "Common created"                     |
+| PUT    | /commons/:id              | YES   | Admin        | Update common grave          | common_id                  | "Common updated"                     |
+| POST   | /commons                  | YES   | Admin        | Create common grave          | req.body                   | "Common created"                     |
 | DELETE | /commons/:id              | YES   | Admin        | Remove one common grave      | common_id                  | "Common deleted"                     |
 
 </summary>
@@ -42,9 +42,7 @@ Tierra Santa comes out of the need of having a better organization within the gr
 
 
 
-
 <details>
-
 <summary>:heavy_plus_sign: Difunto Endpoints</summary>
 <details>
 <summary>
@@ -53,7 +51,27 @@ Tierra Santa comes out of the need of having a better organization within the gr
 | ------ | ------------------------- | ----- | ------------ | ---------------------------- | -------------------------- | ------------------------------------ |
 | GET    | /difunto                  | YES   | Professional | Get all difuntos             | -                          | [{ difunto }]                        |
 | GET    | /difunto/:id              | YES   | Professional | Get one difunto              | difunto_id                 | { difunto }                          |
-| PUT    | /difunto/:id              | YES   | Professional | Update difunto               | difunto_id                 | "Difunto updated"                    |
+| PUT    | /difunto/:id              | YES   | Admin        | Update difunto               | difunto_id                 | "Difunto updated"                    |
+| POST   | /difunto                  | YES   | Admin        | Create difunto               | req.body                   | "Difunto created"                    |
+| DELETE | /difunto/:id              | YES   | Admin        | Remove one difunto           | difunto_id                 | "Difunto deleted"                    |
+
+</summary>
+  Done!
+</details>
+</details>
+
+
+
+<details>
+<summary>⛖ Galery Endpoints</summary>
+<details>
+<summary>
+
+| METHOD | ENDPOINT                  | TOKEN | ROLE         | DESCRIPTION                  | POST PARAMS                | RETURNS                              |
+| ------ | ------------------------- | ----- | ------------ | ---------------------------- | -------------------------- | ------------------------------------ |
+| GET    | /difunto                  | YES   | Professional | Get all difuntos             | -                          | [{ difunto }]                        |
+| GET    | /difunto/:id              | YES   | Professional | Get one difunto              | difunto_id                 | { difunto }                          |
+| PUT    | /difunto/:id              | YES   | Admin        | Update difunto               | difunto_id                 | "Difunto updated"                    |
 | POST   | /difunto                  | YES   | Admin        | Create difunto               | req.body                   | "Difunto created"                    |
 | DELETE | /difunto/:id              | YES   | Admin        | Remove one difunto           | difunto_id                 | "Difunto deleted"                    |
 
