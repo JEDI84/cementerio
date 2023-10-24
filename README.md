@@ -22,7 +22,7 @@ Tierra Santa comes out of the need of having a better organization within the gr
 
 <details>
 
-<summary>🚀### Common Endpoints/summary>
+<summary>🚀### Common Endpoints</summary>
 <details>
 <summary>
 
