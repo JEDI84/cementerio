@@ -28,6 +28,25 @@ async function getOneMausoleum(req, res) {
     }
 }
 
+
+async function getMausoleumDifunto(req, res) {
+    try {
+        const mausoleum = await Mausoleum.findByPk(req.params.id)
+        
+            const deceased = await mausoleum.getDifuntos()
+        
+        if (mausoleum) {
+            return res.status(200).json(deceased)
+        } else {
+            return res.status(200).send('No deceased found in this mausoleum')
+        }
+    } catch (error) {
+        res.status(500).send(error.message)
+    }
+}
+
+
+
 async function createMausoleum(req, res) {
     try {
         const mausoleum = await Mausoleum.create(req.body)
@@ -63,4 +82,5 @@ module.exports = {
     createMausoleum,
     updateMausoleum,
     deleteMausoleum,
+    getMausoleumDifunto
 }
