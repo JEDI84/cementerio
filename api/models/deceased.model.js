@@ -1,7 +1,7 @@
 const { sequelize } = require('../../database/index.js') 
 const { DataTypes } = require('sequelize')
 
-const Difunto = sequelize.define('Difunto', { 
+const Deceased = sequelize.define('Deceased', { 
 
         firstname: {
             type: DataTypes.STRING,           
@@ -20,4 +20,4 @@ const Difunto = sequelize.define('Difunto', {
     timestamps: false,
 })
 
-module.exports = Difunto
+module.exports = Deceased

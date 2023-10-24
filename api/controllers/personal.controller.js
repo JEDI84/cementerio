@@ -1,5 +1,4 @@
 const Personal = require('../models/personal.model') //nos importamos el modelo de usuario
-//const ContactInfo = require('../models/contactInfo.model')
 
 async function getAllPersonal(req, res) {
     try {

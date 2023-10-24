@@ -2,37 +2,38 @@ const Grave = require('../api/models/graves.model')
 const Mausoleum = require('../api/models/mausoleums.model')
 const Common = require('../api/models/common.model')
 const Graveyard = require('../api/models/graveyard.model.js')
-const Galeria = require('../api/models/galeria')
-const Tanatopractore = require('../api/models/tanatopractore')
+const Gallery = require('../api/models/gallery.model')
+const Tanatopractor = require('../api/models/tanatopractor.model')
 const tanatopractore_difunto = require('../api/models/tanatopractore_difunto.model')
-const Difunto = require('../api/models/difunto')
+const Deceased = require('../api/models/deceased.model')
+const Personal = require('../api/models/personal.model')
 
 
 function addRelationsToModels() {
     try {
-        Galeria.hasMany(Grave)
-        Grave.belongsTo(Galeria)
+        Gallery.hasMany(Grave)
+        Grave.belongsTo(Gallery)
 
-        Graveyard.hasMany(Galeria)
-        Galeria.belongsTo(Graveyard)
+        Graveyard.hasMany(Gallery)
+        Gallery.belongsTo(Graveyard)
 
-        Galeria.hasMany(Grave)
-        Grave.belongsTo(Galeria)
+        Gallery.hasMany(Grave)
+        Grave.belongsTo(Gallery)
 
-        Grave.hasOne(Difunto)
-        Difunto.belongsTo(Grave)
+        Grave.hasOne(Deceased)
+        Deceased.belongsTo(Grave)
 
         Graveyard.hasMany(Mausoleum)
         Mausoleum.belongsTo(Graveyard)
 
-        Mausoleum.hasMany(Difunto)
-        Difunto.belongsTo(Mausoleum)
+        Mausoleum.hasMany(Deceased)
+        Deceased.belongsTo(Mausoleum)
 
-        Common.hasMany(Difunto)
-        Difunto.belongsTo(Common)
+        Common.hasMany(Deceased)
+        Deceased.belongsTo(Common)
 
-        Tanatopractore.belongsToMany(Difunto, { through: tanatopractore_difunto})
-        Difunto.belongsToMany(Tanatopractore, { through: tanatopractore_difunto})
+        Tanatopractor.belongsToMany(Deceased, { through: tanatopractore_difunto})
+        Deceased.belongsToMany(Tanatopractor, { through: tanatopractore_difunto})
 
         console.log('Relations added to all models')
     } catch (error) {

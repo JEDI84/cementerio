@@ -1,45 +1,44 @@
-const Difunto = require('../models/difunto') //nos importamos el modelo de usuario
-const Galeria = require('../models/galeria')
+const Deceased = require('../models/deceased.model') //nos importamos el modelo de usuario
+const Gallery = require('../models/gallery.model')
 const Grave = require('../models/graves.model')
 const Graveyard = require('../models/graveyard.model')
 const Common = require('../models/common.model')
 const { sequelize } = require('../../database')
 const {Op} = require("sequelize")
 
-async function getAllDifuntos(req, res) {
+async function getAllDeceased(req, res) {
     try {
-        const difuntos = await Difunto.findAll()
-        res.status(200).json(difuntos)
+      const difuntos = await Deceased.findAll()
+        return res.status(200).json(difuntos)
     } catch (error) {
         res.status(402).send(error.message)
     }
 }
 
-async function getOneDifunto(req, res) {
+async function getOneDeceased(req, res) {
     console.log({ body: req.body, params: req.params, query: req.query })  //consultar lo que nos llega en la request
     try {
-        const difunto = await Difunto.findByPk(req.params.id)
-        if (!difunto) { res.status(500).send("difunto no encontrada") }
+      const difunto = await Deceased.findByPk(req.params.id)
+        if (!difunto) { res.status(500).send("Difunto no encontrado") }
         res.status(200).json(difunto)
     } catch (error) {
         res.status(402).send(error.message)
     }
 }
 
-async function createDifunto(req, res) {
-    console.log(req.body)
+async function createDeceased(req, res) {
     try {
-        const difunto = await Difunto.create(req.body)
-        res.status(200).send("difunto creada")
+      const difunto = await Deceased.create(req.body)
+        res.status(200).send("Difunto creado")
 
     } catch (error) {
         res.status(402).send(error.message)
     }
 }
 
-async function updateDifunto(req, res) {
+async function updateDeceased(req, res) {
     try {
-        const [difunto] = await Difunto.update(req.body, {
+      const [difunto] = await Deceased.update(req.body, {
             where: { id: req.params.id },
         })
         res.status(200).json(difunto)
@@ -48,22 +47,22 @@ async function updateDifunto(req, res) {
     }
 }
 
-async function deleteDifunto(req, res) {
+async function deleteDeceased(req, res) {
     try {
-        const difunto = await Difunto.destroy({
+      const difunto = await Deceased.destroy({
             where: { id: req.params.id },
         })
-        res.status(200).json({ text: "difunto eliminado", difunto: difunto })
+        res.status(200).json({ text: "Difunto eliminado", difunto: difunto })
     } catch (error) {
         res.status(402).send(error.message)
     }
 }
 
 
-async function getDifuntosWithGraves(req, res) {
+async function getDeceasedWithGraves(req, res) {
   console.log({ body: req.body, params: req.params, query: req.query });
   try {
-    const difunto = await Difunto.findOne({
+    const difunto = await Deceased.findOne({
       where: { id: req.params.id },
       include: [
         {
@@ -71,7 +70,7 @@ async function getDifuntosWithGraves(req, res) {
           attributes: ['reference', 'status'],
           include: [
             {
-              model: Galeria,
+              model: Gallery,
               attributes: ['title'],
               include: [
                 {
@@ -95,9 +94,9 @@ async function getDifuntosWithGraves(req, res) {
   }
 }
 
-async function countDifuntos(req, res) {
+async function countDeceased(req, res) {
     try {
-      const difuntosWithGraveId = await Difunto.count({
+      const difuntosWithGraveId = await Deceased.count({
         include: [
           {
             model: Grave,
@@ -106,7 +105,7 @@ async function countDifuntos(req, res) {
         ],
       });
   
-      const difuntosWithCommonId = await Difunto.count({
+      const difuntosWithCommonId = await Deceased.count({
         include: [
           {
             model: Common,
@@ -126,7 +125,7 @@ async function countDifuntos(req, res) {
 
   async function getDeceasedByQuery(req, res){
       try {
-          const deceased = await Difunto.findOne({
+        const deceased = await Deceased.findOne({
               where: { [Op.or]:{lastName: { [Op.eq]: req.query.lastName },
                               firstName: { [Op.eq]: req.query.firstName }}},
           })
@@ -136,4 +135,4 @@ async function countDifuntos(req, res) {
       }
   }
 
-module.exports = { countDifuntos, getAllDifuntos, createDifunto, updateDifunto, deleteDifunto, getDifuntosWithGraves, getOneDifunto, getDeceasedByQuery, }
+module.exports = { countDeceased, getAllDeceased, createDeceased, updateDeceased, deleteDeceased, getDeceasedWithGraves, getOneDeceased, getDeceasedByQuery, }

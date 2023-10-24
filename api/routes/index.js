@@ -7,9 +7,9 @@ router.use('/mausoleums', require('./mausoleums.router'))
 router.use('/commons', require('./commons.router'))
 const authRouter = require ('./auth.router.js')
 
-router.use('/galeria', require('./galeria'))
-router.use('/difunto', require('./difunto'))
-router.use('/tanatopractore', require('./tanatopractore'))
+router.use('/gallery', require('./gallery.router'))
+router.use('/deceased', require('./deceased.router'))
+router.use('/tanatopractor', require('./tanatopractor.router'))
 router.use('/auth', authRouter)
 
 module.exports = router

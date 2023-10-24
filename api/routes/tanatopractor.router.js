@@ -1,4 +1,4 @@
-const { getAllTanatopractores, getOneTanatopractore, createTanatopractore, updateTanatopractore, deleteTanatopractore, getAssignedDeceased, } = require('../controllers/tanatopractore')
+const { getAllTanatopractores, getOneTanatopractore, createTanatopractore, updateTanatopractore, deleteTanatopractore, getAssignedDeceased, } = require('../controllers/tanatopractor.controller')
 const { checkAuth, checkAdmin } = require('../middleware')
 
 const router = require('express').Router() 

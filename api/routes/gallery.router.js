@@ -1,4 +1,4 @@
-const { getAllGalerias, getOneGaleria, createGaleria, updateGaleria, deleteGaleria, } = require('../controllers/galeria')
+const { getAllGalerias, getOneGaleria, createGaleria, updateGaleria, deleteGaleria, } = require('../controllers/gallery.controller')
 const { checkAuth, checkAdmin } = require('../middleware')
 
 
