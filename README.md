@@ -136,17 +136,5 @@ Tierra Santa comes out of the need of having a better organization within the gr
 
 
 
-/*
-<details>
-
-<summary>👩‍🎤Section B</summary>
-<details>
-<summary>🐶Inner Section</summary>
-  Done!
-</details>
-</details>
-*/
-
-
 
 ![happy_coding](https://user-images.githubusercontent.com/970858/63899010-c23fc480-c9ea-11e9-84a2-542907e42362.png)
