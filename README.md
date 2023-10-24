@@ -20,15 +20,12 @@ npm Install
 Tierra Santa comes out of the need of having a better organization within the graveyards. A database where we can organize the decesed, graveyard "map", graves either common or private, rent or bought, employees and external professionals. It has been developt to cover administration porpuses, and so the options for the external users are in the IceBox
 
 
-<details>
 
+
+<details>
 <summary>:round_pushpin: Common Endpoints</summary>
 <details>
 <summary>
-
-
-
-
 
 | METHOD | ENDPOINT                  | TOKEN | ROLE         | DESCRIPTION                  | POST PARAMS                | RETURNS                              |
 | ------ | ------------------------- | ----- | ------------ | ---------------------------- | -------------------------- | ------------------------------------ |
@@ -38,7 +35,6 @@ Tierra Santa comes out of the need of having a better organization within the gr
 | POST   | /commons                  | YES   | Professional | Create common grave          | req.body                   | "Common created"                     |
 | DELETE | /commons/:id              | YES   | Admin        | Remove one common grave      | common_id                  | "Common deleted"                     |
 
-
 </summary>
   Done!
 </details>
@@ -46,7 +42,12 @@ Tierra Santa comes out of the need of having a better organization within the gr
 
 
 
-### Difunto Endpoints
+
+<details>
+
+<summary>:heavy_plus_sign: Difunto Endpoints</summary>
+<details>
+<summary>
 
 | METHOD | ENDPOINT                  | TOKEN | ROLE         | DESCRIPTION                  | POST PARAMS                | RETURNS                              |
 | ------ | ------------------------- | ----- | ------------ | ---------------------------- | -------------------------- | ------------------------------------ |
@@ -56,14 +57,11 @@ Tierra Santa comes out of the need of having a better organization within the gr
 | POST   | /difunto                  | YES   | Admin        | Create difunto               | req.body                   | "Difunto created"                    |
 | DELETE | /difunto/:id              | YES   | Admin        | Remove one difunto           | difunto_id                 | "Difunto deleted"                    |
 
-<details>
-
-<summary>🚀Travelling Section</summary>
-<details>
-<summary>🫂Inner Section</summary>
+</summary>
   Done!
 </details>
 </details>
+
 
 
 <details>
