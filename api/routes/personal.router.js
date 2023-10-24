@@ -1,4 +1,4 @@
-const { getAllPersonal, getOnePersonal, createPersonal, updatePersonal, deletePersonal, } = require('../controllers/personal.controller.js')
+const { getAllPersonal, getOnePersonal, createPersonal, updatePersonal, deletePersonal } = require('../controllers/personal.controller.js')
 const { checkAuth, checkAdmin } = require('../middleware')
 
 

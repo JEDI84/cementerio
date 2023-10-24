@@ -54,4 +54,4 @@ async function deletePersonal(req, res) {
     }
 }
 
-module.exports = { getAllPersonal, getOnePersonal, createPersonal, updatePersonal, deletePersonal, }
+module.exports = { getAllPersonal, getOnePersonal, createPersonal, updatePersonal, deletePersonal }
