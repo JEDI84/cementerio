@@ -20,8 +20,6 @@ npm Install
 Tierra Santa comes out of the need of having a better organization within the graveyards. A database where we can organize the decesed, graveyard "map", graves either common or private, rent or bought, employees and external professionals. It has been developt to cover administration porpuses, and so the options for the external users are in the IceBox
 
 
-
-
 <details>
 <summary>:round_pushpin: Common Endpoints</summary>
 <summary>
@@ -45,11 +43,11 @@ Tierra Santa comes out of the need of having a better organization within the gr
 
 | METHOD | ENDPOINT                  | TOKEN | ROLE         | DESCRIPTION                  | POST PARAMS                | RETURNS                              |
 | ------ | ------------------------- | ----- | ------------ | ---------------------------- | -------------------------- | ------------------------------------ |
-| GET    | /difunto                  | YES   | Professional | Get all difuntos             | -                          | [{ difunto }]                        |
-| GET    | /difunto/:id              | YES   | Professional | Get one difunto              | difunto_id                 | { difunto }                          |
-| PUT    | /difunto/:id              | YES   | Admin        | Update difunto               | difunto_id                 | "Difunto updated"                    |
-| POST   | /difunto                  | YES   | Admin        | Create difunto               | req.body                   | "Difunto created"                    |
-| DELETE | /difunto/:id              | YES   | Admin        | Remove one difunto           | difunto_id                 | "Difunto deleted"                    |
+| GET    | /deceased                 | YES   | Professional | Get all deceased             | -                          | [{ deceased }]                       |
+| GET    | /deceased/:id             | YES   | Professional | Get one deceased             | deceased_id                | { deceased }                         |
+| PUT    | /deceased/:id             | YES   | Admin        | Update deceased              | deceased_id                | "Deceased updated"                   |
+| POST   | /deceased                 | YES   | Admin        | Create deceased              | req.body                   | "Deceased created"                   |
+| DELETE | /deceased/:id             | YES   | Admin        | Remove one deceased          | deceased_id                | "Deceased deleted"                   |
 
 </summary>
 </details>
@@ -61,7 +59,7 @@ Tierra Santa comes out of the need of having a better organization within the gr
 
 | METHOD | ENDPOINT                  | TOKEN | ROLE         | DESCRIPTION                  | POST PARAMS                | RETURNS                              |
 | ------ | ------------------------- | ----- | ------------ | ---------------------------- | -------------------------- | ------------------------------------ |
-| GET    | /galery                   | YES   | Professional | Get all galeries             | -                          | [{ galery }]                         |
+| GET    | /galeries                 | YES   | Professional | Get all galeries             | -                          | [{ galeries }]                       |
 | GET    | /galery/:id               | YES   | Professional | Get one galery               | galery_id                  | { galery }                           |
 | PUT    | /galery/:id               | YES   | Admin        | Update galery                | galery_id                  | "Galery updated"                     |
 | POST   | /galery                   | YES   | Admin        | Create galery                | req.body                   | "Galery created"                     |
@@ -69,6 +67,42 @@ Tierra Santa comes out of the need of having a better organization within the gr
 
 </summary>
 </details>
+
+
+<details>
+<summary>:headstone: Grave Endpoints</summary>
+<summary>
+
+| METHOD | ENDPOINT                  | TOKEN | ROLE         | DESCRIPTION                  | POST PARAMS                | RETURNS                              |
+| ------ | ------------------------- | ----- | ------------ | ---------------------------- | -------------------------- | ------------------------------------ |
+| GET    | /graves                   | YES   | Professional | Get all graves               | -                          | [{ graves }]                         |
+| GET    | /grave/:id                | YES   | Professional | Get one grave                | grave_id                   | { grave }                            |
+| PUT    | /grave/:id                | YES   | Admin        | Update grave                 | grave_id                   | "Grave updated"                      |
+| POST   | /grave                    | YES   | Admin        | Create grave                 | req.body                   | "Grave created"                      |
+| DELETE | /grave/:id                | YES   | Admin        | Remove one grave             | grave_id                   | "Grave deleted"                      |
+
+</summary>
+</details>
+
+
+<details>
+<summary>:classical_building: Graveyard Endpoints</summary>
+<summary>
+
+| METHOD | ENDPOINT                  | TOKEN | ROLE         | DESCRIPTION                  | POST PARAMS                | RETURNS                              |
+| ------ | ------------------------- | ----- | ------------ | ---------------------------- | -------------------------- | ------------------------------------ |
+| GET    | /graveyards               | YES   | Professional | Get all graveyards           | -                          | [{ graveyards }]                     |
+| GET    | /graveyard/:id            | YES   | Professional | Get one graveyard            | graveyard_id               | { graveyard }                        |
+| PUT    | /graveyard/:id            | YES   | Admin        | Update graveyard             | graveyard_id               | "Graveyard updated"                  |
+| POST   | /graveyard                | YES   | Admin        | Create graveyard             | req.body                   | "Graveyard created"                  |
+| DELETE | /graveyard/:id            | YES   | Admin        | Remove one graveyard         | graveyard_id               | "Graveyard deleted"                  |
+
+</summary>
+</details>
+
+
+
+
 
 
 <details>
