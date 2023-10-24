@@ -44,8 +44,7 @@ Tierra Santa comes out of the need of having a better organization within the gr
 | GET    | /deceased/:id             | YES   | Professional | Get one deceased             | deceased_id                | { deceased }                         |
 | GET    | /deceased/name            | YES   | Professional | Get one deceased by name     | deceased_name              | { deceased }                         |
 | GET    | /deceased/count           | YES   | Professional | Get total deceased           | deceased_count             | { deceased }                         |
-| GET    | /deceased/Grave/Galery/Graveyard/:id  
-                                     | YES   | Professional | Get one deceased with grave details if in grave           | deceased_id                          |
+| GET    | /deceased/Grave/Galery/Graveyard/:id | YES | Professional | Get one deceased with grave details if in grave  | deceased_id                          |
 | PUT    | /deceased/:id             | YES   | Admin        | Update deceased              | deceased_id                | "Deceased updated"                   |
 | POST   | /deceased                 | YES   | Admin        | Create deceased              | req.body                   | "Deceased created"                   |
 | DELETE | /deceased/:id             | YES   | Admin        | Remove one deceased          | deceased_id                | "Deceased deleted"                   |
