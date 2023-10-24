@@ -56,16 +56,5 @@ async function deleteGraveyard(req, res) {
     }
 }
 
-async function getProfile(req, res) {
-    console.log(res.locals.graveyard)
-    try {
-        const graveyard = await Graveyard.findByPk(res.locals.graveyard.id)
-        if (!graveyard) { res.status(500).send("Graveyard not found") }
-        res.status(200).json(graveyard)
-    } catch (error) {
-        res.status(402).send(error.message)
-    }
-}
 
-
-module.exports = { getAllGraveyards, getOneGraveyard, createGraveyard, updateGraveyard, deleteGraveyard, getProfile }
+module.exports = { getAllGraveyards, getOneGraveyard, createGraveyard, updateGraveyard, deleteGraveyard, }
