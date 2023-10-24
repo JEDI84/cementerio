@@ -9,7 +9,7 @@
 
 - Tierra Santa has been developed by:
 
-:baseball: Raul Villarraso: https://github.com/RaulVillarraso, :basketball: Adrián Angulo Dieppa: https://github.com/adrianaadd :gemini: Yeray Armas: https://github.com/JEDI84
+:capricorn: Raul Villarraso: https://github.com/RaulVillarraso, :aries: Adrián Angulo Dieppa: https://github.com/adrianaadd :gemini: Yeray Armas: https://github.com/JEDI84
 
 
 ## PROJECT SETUP
@@ -107,6 +107,20 @@ Tierra Santa comes out of the need of having a better organization within the gr
 
 <details>
 <summary>:love_hotel: Personal Endpoints</summary>
+
+| METHOD | ENDPOINT                  | TOKEN | ROLE         | DESCRIPTION                  | POST PARAMS                | RETURNS                              |
+| ------ | ------------------------- | ----- | ------------ | ---------------------------- | -------------------------- | ------------------------------------ |
+| GET    | /personal                 | YES   | Professional | Get all personal             | -                          | [{ personal }]                       |
+| GET    | /personal/:id             | YES   | Professional | Get one personal             | personal_id                | { personal }                         |
+| PUT    | /personal/:id             | YES   | Admin        | Update personal              | personal_id                | "Personal updated"                   |
+| POST   | /personal                 | YES   | Admin        | Create personal              | req.body                   | "Personal created"                   |
+| DELETE | /personal/:id             | YES   | Admin        | Remove one personal          | personal_id                | "Personal deleted"                   | 
+
+</details>
+
+
+<details>
+<summary> :man: :woman: Personal Endpoints</summary>
 
 | METHOD | ENDPOINT                  | TOKEN | ROLE         | DESCRIPTION                  | POST PARAMS                | RETURNS                              |
 | ------ | ------------------------- | ----- | ------------ | ---------------------------- | -------------------------- | ------------------------------------ |
