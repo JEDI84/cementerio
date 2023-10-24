@@ -19,7 +19,16 @@ npm Install
 
 Tierra Santa comes out of the need of having a better organization within the graveyards. A database where we can organize the decesed, graveyard "map", graves either common or private, rent or bought, employees and external professionals. It has been developt to cover administration porpuses, and so the options for the external users are in the IceBox
 
-### Common Endpoints
+
+<details>
+
+<summary>🚀### Common Endpoints/summary>
+<details>
+<summary>
+
+
+
+
 
 | METHOD | ENDPOINT                  | TOKEN | ROLE         | DESCRIPTION                  | POST PARAMS                | RETURNS                              |
 | ------ | ------------------------- | ----- | ------------ | ---------------------------- | -------------------------- | ------------------------------------ |
@@ -28,6 +37,14 @@ Tierra Santa comes out of the need of having a better organization within the gr
 | PUT    | /commons/:id              | YES   | Professional | Update common grave          | common_id                  | "Common updated"                     |
 | POST   | /commons                  | YES   | Professional | Create common grave          | req.body                   | "Common created"                     |
 | DELETE | /commons/:id              | YES   | Admin        | Remove one common grave      | common_id                  | "Common deleted"                     |
+
+
+</summary>
+  Done!
+</details>
+</details>
+
+
 
 ### Difunto Endpoints
 
