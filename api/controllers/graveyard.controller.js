@@ -1,5 +1,5 @@
-const Graveyard = require('../models/graveyard.model') //nos importamos el modelo de usuario
-//const GraveInfo = require('../models/graveInfo.model')
+const Graveyard = require('../models/graveyard.model') 
+
 
 async function getAllGraveyards(req, res) {
     try {

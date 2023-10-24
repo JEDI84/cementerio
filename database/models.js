@@ -11,6 +11,9 @@ const Difunto = require('../api/models/difunto')
 
 function addRelationsToModels() {
     try {
+        Galeria.hasMany(Grave)
+        Grave.belongsTo(Galeria)
+
         Graveyard.hasMany(Galeria)
         Galeria.belongsTo(Graveyard)
 

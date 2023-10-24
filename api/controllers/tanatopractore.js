@@ -1,5 +1,6 @@
 const Tanatopractore = require('../models/tanatopractore') 
-
+const Difunto = require('../models/difunto') 
+const tanatopractore_difunto = require("../models/difunto")
 
 async function getAllTanatopractores(req, res){
     try {
@@ -55,5 +56,7 @@ async function deleteTanatopractore(req, res){
         res.status(402).send(error.message)
     }
 }
+
+
 
 module.exports = { getAllTanatopractores, getOneTanatopractore, createTanatopractore, updateTanatopractore, deleteTanatopractore,}
