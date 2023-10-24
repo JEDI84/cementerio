@@ -4,8 +4,7 @@ const { DataTypes } = require('sequelize')
 const Difunto = sequelize.define('Difunto', { 
 
         firstname: {
-            type: DataTypes.STRING,
-            
+            type: DataTypes.STRING,           
         },
         lastname: {
             type: DataTypes.STRING
