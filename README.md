@@ -24,6 +24,7 @@ Tierra Santa comes out of the need of having a better organization within the gr
 
 <details>
 <summary>:round_pushpin: Common Endpoints</summary>
+  
 <summary>
 
 | METHOD | ENDPOINT                  | TOKEN | ROLE         | DESCRIPTION                  | POST PARAMS                | RETURNS                              |
@@ -38,10 +39,8 @@ Tierra Santa comes out of the need of having a better organization within the gr
 </details>
 
 
-
 <details>
 <summary>:latin_cross: Difunto Endpoints</summary>
-<details>
 <summary>
 
 | METHOD | ENDPOINT                  | TOKEN | ROLE         | DESCRIPTION                  | POST PARAMS                | RETURNS                              |
@@ -53,15 +52,11 @@ Tierra Santa comes out of the need of having a better organization within the gr
 | DELETE | /difunto/:id              | YES   | Admin        | Remove one difunto           | difunto_id                 | "Difunto deleted"                    |
 
 </summary>
-  Done!
 </details>
-</details>
-
 
 
 <details>
 <summary>:arrow_up: Galery Endpoints</summary>
-<details>
 <summary>
 
 | METHOD | ENDPOINT                  | TOKEN | ROLE         | DESCRIPTION                  | POST PARAMS                | RETURNS                              |
@@ -73,10 +68,7 @@ Tierra Santa comes out of the need of having a better organization within the gr
 | DELETE | /galery/:id               | YES   | Admin        | Remove one galery            | galery_id                  | "Galery deleted"                     |
 
 </summary>
-  Done!
 </details>
-</details>
-
 
 
 <details>
