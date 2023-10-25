@@ -12,9 +12,6 @@ const Deceased = sequelize.define('deceased', {
         type: {
             type: DataTypes.STRING
         },
-        create_ad: {
-            type: DataTypes.DATE
-        },
 },
 { //opciones
     timestamps: false,

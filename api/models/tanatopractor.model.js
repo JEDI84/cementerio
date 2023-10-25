@@ -9,9 +9,6 @@ const Tanatopractor = sequelize.define('tanatopractor', {
         },
         info: {
             type: DataTypes.STRING
-        }, 
-        create_ad: {
-            type: DataTypes.DATE
         },
 },
 { //opciones
