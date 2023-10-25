@@ -5,7 +5,6 @@ const Tanatopractor = sequelize.define('tanatopractor', {
 
         name: {
             type: DataTypes.STRING,
-            
         },
         info: {
             type: DataTypes.STRING
