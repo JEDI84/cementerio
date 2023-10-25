@@ -125,11 +125,11 @@ async function countDeceased(req, res) {
 
   async function getDeceasedByQuery(req, res){
       try {
-        const deceased = await Deceased.findOne({
-              where: { [Op.or]:{lastName: { [Op.eq]: req.query.lastName },
+        const deceased = await Deceased.findAll({
+              where: { [Op.and]:{lastName: { [Op.eq]: req.query.lastName },
                               firstName: { [Op.eq]: req.query.firstName }}},
           })
-          return res.status(200).json(deceased)
+        deceased.length !== 0 ? res.status(200).json(deceased) : res.status(200).send('No se encontró nada')
       } catch (error) {
           res.status(500).send(error.message)
       }
