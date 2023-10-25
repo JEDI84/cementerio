@@ -10,7 +10,6 @@ async function getAllTanatopractores(req, res){
 }
 
 async function getOneTanatopractore(req, res) {
-    console.log({body: req.body, params: req.params, query: req.query})  
     try {
         const tanatopractore = await Tanatopractor.findByPk(req.params.id)
         if (!tanatopractore){ res.status(500).send("Tanatopractor no encontrado")}
@@ -21,7 +20,6 @@ async function getOneTanatopractore(req, res) {
 }
 
 async function createTanatopractore(req, res){
-    console.log(req.body)
     try {
         const tanatopractore = await Tanatopractor.create(req.body)
         res.status(200).send("Tanatopractor creado")

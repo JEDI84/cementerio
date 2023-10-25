@@ -28,7 +28,6 @@ async function getOneMausoleum(req, res) {
     }
 }
 
-
 async function getMausoleumDifunto(req, res) {
     try {
         const mausoleum = await Mausoleum.findByPk(req.params.id)
@@ -44,8 +43,6 @@ async function getMausoleumDifunto(req, res) {
         res.status(500).send(error.message)
     }
 }
-
-
 
 async function createMausoleum(req, res) {
     try {

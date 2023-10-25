@@ -21,8 +21,6 @@ async function getOneGaleria(req, res) {
     }
 }
 
-
-
 async function createGaleria(req, res){
     console.log(req.body)
     try {

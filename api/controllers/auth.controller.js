@@ -29,11 +29,10 @@ async function login(req, res){
 
 
 async function signup(req, res){
-    
     const saltRounds = bcrypt.genSaltSync(parseInt(process.env.SALTROUNDS))
-    console.log(saltRounds)
     const hashedPassword = bcrypt.hashSync(req.body.password, saltRounds)
     req.body.password = hashedPassword
+    
     try {
         const personal = await Personal.create(req.body)
         const payload = { email: personal.email }
