@@ -33,7 +33,7 @@ async function getMausoleumDifunto(req, res) {
     try {
         const mausoleum = await Mausoleum.findByPk(req.params.id)
         
-            const deceased = await mausoleum.getDifuntos()
+            const deceased = await mausoleum.getDeceaseds()
         
         if (mausoleum) {
             return res.status(200).json(deceased)

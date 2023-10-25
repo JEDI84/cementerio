@@ -3,7 +3,7 @@ const Gallery = require('../models/gallery.model')
 
 async function getAllGalerias(req, res){
     try {
-        const galerias = await Galeria.findAll()
+        const galerias = await Gallery.findAll()
         res.status(200).json(galerias)
     } catch (error) {
         res.status(402).send(error.message)
@@ -13,7 +13,7 @@ async function getAllGalerias(req, res){
 async function getOneGaleria(req, res) {
     console.log({body: req.body, params: req.params, query: req.query}) 
     try {
-        const galeria = await Galeria.findByPk(req.params.id)
+        const galeria = await Gallery.findByPk(req.params.id)
         if (!galeria){ res.status(500).send("galeria no encontrada")}
         res.status(200).json(galeria)
     } catch (error) {
@@ -26,7 +26,7 @@ async function getOneGaleria(req, res) {
 async function createGaleria(req, res){
     console.log(req.body)
     try {
-        const galeria = await Galeria.create(req.body)
+        const galeria = await Gallery.create(req.body)
         res.status(200).send("galeria creada")
 
     } catch (error) {
@@ -36,7 +36,7 @@ async function createGaleria(req, res){
 
 async function updateGaleria(req, res){
     try {
-        const [galeria] = await Galeria.update(req.body, {
+        const [galeria] = await Gallery.update(req.body, {
             where: {id: req.params.id},
         })
         res.status(200).json(galeria)
@@ -47,7 +47,7 @@ async function updateGaleria(req, res){
 
 async function deleteGaleria(req, res){
     try {
-        const galeria = await Galeria.destroy({
+        const galeria = await Gallery.destroy({
             where: { id: req.params.id },
         })
         res.status(200).json({text: "galeria eliminado", galeria: galeria})

@@ -7,7 +7,6 @@ router.get('/search', checkAuth, getDeceasedByQuery)
 router.get('/difuntoscount', countDeceased) 
 router.get('/:id',checkAuth,getOneDeceased)
 router.post('/', checkAuth, checkAdmin, createDeceased) 
-router.get('/',getAllDeceased) 
 router.get('/difuntos-Grave-Galery-Graveyard/:id',getDeceasedWithGraves) 
 router.get('/:id', getOneDeceased)
 
