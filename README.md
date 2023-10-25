@@ -42,6 +42,9 @@ Tierra Santa comes out of the need of having a better organization within the gr
 | ------ | ------------------------- | ----- | ------------ | ---------------------------- | -------------------------- | ------------------------------------ |
 | GET    | /deceased                 | YES   | Professional | Get all deceased             | -                          | [{ deceased }]                       |
 | GET    | /deceased/:id             | YES   | Professional | Get one deceased             | deceased_id                | { deceased }                         |
+| GET    | /deceased/name            | YES   | Professional | Get one deceased by name     | deceased_name              | { deceased }                         |
+| GET    | /deceased/count           | YES   | Professional | Get total deceased           | deceased_count             | { deceased }                         |
+| GET    | /deceased/Grave/Galery/Graveyard/:id | YES | Professional | Get one deceased with grave details if in grave  | deceased_id                          |
 | PUT    | /deceased/:id             | YES   | Admin        | Update deceased              | deceased_id                | "Deceased updated"                   |
 | POST   | /deceased                 | YES   | Admin        | Create deceased              | req.body                   | "Deceased created"                   |
 | DELETE | /deceased/:id             | YES   | Admin        | Remove one deceased          | deceased_id                | "Deceased deleted"                   |
@@ -50,15 +53,15 @@ Tierra Santa comes out of the need of having a better organization within the gr
 
 
 <details>
-<summary>:arrow_up: Galery Endpoints</summary>
+<summary>:arrow_up: Gallery Endpoints</summary>
 
 | METHOD | ENDPOINT                  | TOKEN | ROLE         | DESCRIPTION                  | POST PARAMS                | RETURNS                              |
 | ------ | ------------------------- | ----- | ------------ | ---------------------------- | -------------------------- | ------------------------------------ |
-| GET    | /galeries                 | YES   | Professional | Get all galeries             | -                          | [{ galeries }]                       |
-| GET    | /galery/:id               | YES   | Professional | Get one galery               | galery_id                  | { galery }                           |
-| PUT    | /galery/:id               | YES   | Admin        | Update galery                | galery_id                  | "Galery updated"                     |
-| POST   | /galery                   | YES   | Admin        | Create galery                | req.body                   | "Galery created"                     |
-| DELETE | /galery/:id               | YES   | Admin        | Remove one galery            | galery_id                  | "Galery deleted"                     |
+| GET    | /galleries                | YES   | Professional | Get all galleries            | -                          | [{ galleries }]                      |
+| GET    | /gallery/:id              | YES   | Professional | Get one gallery              | gallery_id                 | { gallery }                          |
+| PUT    | /gallery/:id              | YES   | Admin        | Update gallery               | gallery_id                 | "Gallery updated"                    |
+| POST   | /gallery                  | YES   | Admin        | Create gallery               | req.body                   | "Gallery created"                    |
+| DELETE | /gallery/:id              | YES   | Admin        | Remove one gallery           | gallery_id                 | "Gallery deleted"                    |
 
 </details>
 
@@ -107,15 +110,15 @@ Tierra Santa comes out of the need of having a better organization within the gr
 
 
 <details>
-<summary> :man: :woman: Staff Endpoints</summary>
+<summary> :man: :woman: Personal Endpoints</summary>
 
 | METHOD | ENDPOINT                  | TOKEN | ROLE         | DESCRIPTION                  | POST PARAMS                | RETURNS                              |
 | ------ | ------------------------- | ----- | ------------ | ---------------------------- | -------------------------- | ------------------------------------ |
-| GET    | /staff                    | YES   | Professional | Get all staff                | -                          | [{ staff }]                          |
-| GET    | /staff/:id                | YES   | Professional | Get one staff                | staff_id                   | { staff }                            |
-| PUT    | /staff/:id                | YES   | Admin        | Update staff                 | staff_id                   | "Staff updated"                      |
-| POST   | /staff                    | YES   | Admin        | Create staff                 | req.body                   | "Staff created"                      |
-| DELETE | /staff/:id                | YES   | Admin        | Remove one staff             | staff_id                   | "Staff deleted"                      | 
+| GET    | /personal                 | YES   | Professional | Get all personal             | -                          | [{ personal }]                       |
+| GET    | /personal/:id             | YES   | Professional | Get one personal             | personal_id                | { personal }                         |
+| PUT    | /personal/:id             | YES   | Admin        | Update personal              | personal_id                | "Personal updated"                   |
+| POST   | /personal                 | YES   | Admin        | Create personal              | req.body                   | "Personal created"                   |
+| DELETE | /personal/:id             | YES   | Admin        | Remove one personal          | personal_id                | "Personal deleted"                   | 
 
 </details>
 
@@ -125,12 +128,12 @@ Tierra Santa comes out of the need of having a better organization within the gr
 
 | METHOD | ENDPOINT                  | TOKEN | ROLE         | DESCRIPTION                  | POST PARAMS                | RETURNS                              |
 | ------ | ------------------------- | ----- | ------------ | ---------------------------- | -------------------------- | ------------------------------------ |
-| GET    | /tanatopractors           | YES   | Professional | Get all personal             | -                          | [{ tanatopractors }]                       |
-| GET    | /tanatopractor/:id        | YES   | Professional | Get one personal             | personal_id                | { tanatopractor }                         |
-| GET    | /tanatopractor/:id/deceased  | YES   | Professional | Get assigned deceased     | tanatopractor_id           | { tanatopractor_deceased }           |
-| PUT    | /tanatopractor/:id        | YES   | Admin        | Update personal              | personal_id                | "Tanatopractor updated"              |
-| POST   | /tanatopractor            | YES   | Admin        | Create personal              | req.body                   | "Tanatopractor created"              |
-| DELETE | /tanatopractor/:id        | YES   | Admin        | Remove one personal          | personal_id                | "Tanatopractor deleted"              | 
+| GET    | /tanatopractors           | YES   | Professional | Get all tanatopractor        | -                          | [{ tanatopractors }]                 |
+| GET    | /tanatopractor/:id        | YES   | Professional | Get one tanatopractor        | tanatopractor_id           | { tanatopractor }                    |
+| GET    | /tanatopractor/:id/deceased | YES   | Professional | Get assigned deceased      | tanatopractor_id           | { tanatopractor_deceased }           |
+| PUT    | /tanatopractor/:id        | YES   | Admin        | Update tanatopractor         | tanatopractor_id           | "Tanatopractor updated"              |
+| POST   | /tanatopractor            | YES   | Admin        | Create tanatopractor         | req.body                   | "Tanatopractor created"              |
+| DELETE | /tanatopractor/:id        | YES   | Admin        | Remove one tanatopractor     |tanatopractor_id            | "Tanatopractor deleted"              | 
 
 </details>
 
