@@ -16,7 +16,7 @@ async function login(req, res){
         if (comparePass) {
             const payload = { email: personal.email } // información que incluimos en el token
             const token = jwt.sign(payload, process.env.SECRET, { expiresIn: '1h' })  // generamos el token
-            return res.status(200).send({ token })
+            return res.status(200).send({ token, role: personal.role })
         } else {
             return res.status(404).json('Error: Email or Password incorrect')
         }
