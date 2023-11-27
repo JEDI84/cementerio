@@ -1,4 +1,5 @@
 const Grave = require('../models/graves.model')
+const Deceased = require('../models/deceased.model')
 
 //CRUD
 
