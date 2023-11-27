@@ -4,7 +4,9 @@ const Grave = require('../models/graves.model')
 
 async function getAllGraves(req, res){
     try {
-        const grave = await Grave.findAll()
+        const grave = await Grave.findAll({
+            include: Deceased
+        })
         if(grave.length !== 0){
             return res.status(200).json(grave)
         } else {
