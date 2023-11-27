@@ -60,7 +60,6 @@ async function deleteDeceased(req, res) {
 
 
 async function getDeceasedWithGraves(req, res) {
-  console.log({ body: req.body, params: req.params, query: req.query });
   try {
     const difunto = await Deceased.findOne({
       where: { id: req.params.id },
@@ -83,11 +82,9 @@ async function getDeceasedWithGraves(req, res) {
         },
       ],
     });
-
     if (!difunto) {
       return res.status(404).send("Difunto no encontrado"); // Cambiado a código de estado 404 para un recurso no encontrado.
     }
-
     res.status(200).json(difunto);
   } catch (error) {
     res.status(500).send(error.message);
